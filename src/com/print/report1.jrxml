@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37051d96-3289-45d0-a751-1d92dfc98da9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nokar" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     parkir_keluar.`id` AS parkir_keluar_id,
+     parkir_keluar.`nomor_kendaraan` AS parkir_keluar_nomor_kendaraan,
+     parkir_keluar.`nomor_karcis` AS parkir_keluar_nomor_karcis,
+     parkir_keluar.`jenis_kendaraan` AS parkir_keluar_jenis_kendaraan,
+     parkir_keluar.`jam_masuk` AS parkir_keluar_jam_masuk,
+     parkir_keluar.`jam_keluar` AS parkir_keluar_jam_keluar,
+     parkir_keluar.`lama_parkir` AS parkir_keluar_lama_parkir,
+     parkir_keluar.`total_bayar` AS parkir_keluar_total_bayar,
+     parkir_keluar.`fotomasuk` AS parkir_keluar_fotomasuk,
+     parkir_keluar.`fotokeluar` AS parkir_keluar_fotokeluar
+FROM
+     `parkir_keluar` parkir_keluar]]>
+	</queryString>
+	<field name="parkir_keluar_id" class="java.lang.Integer"/>
+	<field name="parkir_keluar_nomor_kendaraan" class="java.lang.String"/>
+	<field name="parkir_keluar_nomor_karcis" class="java.lang.String"/>
+	<field name="parkir_keluar_jenis_kendaraan" class="java.lang.String"/>
+	<field name="parkir_keluar_jam_masuk" class="java.sql.Timestamp"/>
+	<field name="parkir_keluar_jam_keluar" class="java.sql.Timestamp"/>
+	<field name="parkir_keluar_lama_parkir" class="java.lang.Integer"/>
+	<field name="parkir_keluar_total_bayar" class="java.lang.Integer"/>
+	<field name="parkir_keluar_fotomasuk" class="java.lang.Object"/>
+	<field name="parkir_keluar_fotokeluar" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="16" width="169" height="20" uuid="a1bab007-0029-4487-9c7f-9aa03c6037b6"/>
+				<textFieldExpression><![CDATA[$F{parkir_keluar_nomor_karcis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
